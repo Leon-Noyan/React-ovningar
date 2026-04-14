@@ -1,0 +1,106 @@
+/* Grunden - Global styling */
+body {
+  background-color: #f8fafc; /* Ljus, modern gråblå */
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: #1e293b;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 30px;
+  letter-spacing: -0.025em;
+}
+
+/* Sökfältet */
+.search-container {
+  margin-bottom: 50px;
+}
+
+.search-container input {
+  padding: 14px 24px;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  border: 2px solid #e2e8f0;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  outline: none;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.search-container input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+/* Griddet i UserList */
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  justify-content: center;
+}
+
+/* Card-wrapper (Din Wrapper-komponent) */
+.card-wrapper {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-wrapper:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  border-color: #3b82f6;
+}
+
+/* Innehåll i UserCard */
+.card-wrapper h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #1e293b;
+}
+
+.email {
+  color: #3b82f6; /* Blå accent för mailen */
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.city {
+  color: #64748b;
+  font-size: 0.85rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.city::before {
+  content: '📍 ';
+  margin-right: 4px;
+}
+
+/* Status-meddelanden */
+p {
+  color: #64748b;
+  font-size: 1.1rem;
+}
